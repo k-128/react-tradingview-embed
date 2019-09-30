@@ -1,0 +1,38 @@
+{
+  "name": "react-tradingview-embed",
+  "version": "1.0.0",
+  "description": "React Component for TradingView Embeds",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xnr-k/react-tradingview-embed.git"
+  },
+  "keywords": [
+    "react",
+    "tradingview",
+    "embeds",
+    "widgets"
+  ],
+  "author": "k <xnr.k@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xnr-k/react-tradingview-embed/issues"
+  },
+  "homepage": "https://github.com/xnr-k/react-tradingview-embed#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.10.1"
+  },
+  "files": [
+    "dist/*"
+  ]
+}
