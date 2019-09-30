@@ -3,8 +3,8 @@ React component for [TradingView Embeds](https://www.tradingview.com/widget/)
 <br />
 
 ### Installation
-`npm install --save react-tradingview-embed` <br />
-or
+`npm install --save react-tradingview-embed`<br />
+or<br />
 `yarn add react-tradingview-embed`
 <br />
 
@@ -13,7 +13,7 @@ App.js
 ```javascript
 import React from 'react';
 
-import { TradingViewEmbed, widgetType } from "./TradingViewEmbed";
+import { TradingViewEmbed, widgetType } from "react-tradingview-embed";
 
 
 export default function App() {
@@ -52,7 +52,7 @@ export default function App() {
 Use widgetConfig to declare widget parameters.<br />
 See each [individual widgets](https://www.tradingview.com/widget/) for available parameters.<br />
 The above code running:
-![screen](bin/screen.PNG)
+![screen](https://github.com/xnr-k/react-tradingview-embed/blob/master/bin/screen.PNG)
 <br />
 
 **Supported widgets**:
