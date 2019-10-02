@@ -76,18 +76,18 @@ function getTradingViewObj(widget="widget") {
  * Widgets
  */
 // Advanced Chart
-function widgetAdvancedChart(widgetCount, copyrightLink) {
+function widgetAdvancedChart(count, copyrightLink) {
   const widgetHtml = buildHtml(
     "ADVANCED_CHART",
     null,
-    `tradingview_AC_${widgetCount}`,
+    `tradingview_AC_${count}`,
     copyrightLink
   );
   return widgetHtml;
 }
 
 
-function widgetAdvancedChartOnload(script, acCount, widgetConfig={}) {
+function widgetAdvancedChartOnload(script, count, widgetConfig={}) {
   const defaultConfigAdvancedChart = {
     "symbol": "NASDAQ:GOOG",
     "timezone": "Etc/UTC",
@@ -162,7 +162,7 @@ function widgetAdvancedChartOnload(script, acCount, widgetConfig={}) {
         "enable_publishing": enable_publishing,
         "theme": colorTheme,
         "locale": locale,
-        "container_id": `tradingview_AC_${acCount}`
+        "container_id": `tradingview_AC_${count}`
       };
       config[refKey] = refId;
       new TV(config);
@@ -849,18 +849,18 @@ function widgetSymbolInfo(widgetConfig={}, copyrightLink) {
 
 
 // Symbol Overview
-function widgetSymbolOverview(widgetCount, copyrightLink) {
+function widgetSymbolOverview(count, copyrightLink) {
   const widgetHtml = buildHtml(
     "SYMBOL_OVERVIEW",
     null,
-    `tradingview_SO_${widgetCount}`,
+    `tradingview_SO_${count}`,
     copyrightLink
   );
   return widgetHtml;
 }
 
 
-function widgetSymbolOverviewOnload(script, acCount, widgetConfig={}) {
+function widgetSymbolOverviewOnload(script, count, widgetConfig={}) {
   const defaultConfigSymbolOverview = {
     "symbols": [
       [
@@ -913,7 +913,7 @@ function widgetSymbolOverviewOnload(script, acCount, widgetConfig={}) {
         "height": height,
         "locale": locale,
         "chartOnly": chartOnly,
-        "container_id": `tradingview_SO_${acCount}`,
+        "container_id": `tradingview_SO_${count}`,
       };
       new TV(config);
     }
@@ -1190,10 +1190,11 @@ class TradingViewEmbed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      widgetHtml: null,
+      widget: {
+        id: `${props.widgetType}_1`,
+        html: null,
+      }
     };
-    // Bindings
-    this.setEmbed = this.setEmbed.bind(this);
   }
 
   componentDidMount() {
@@ -1204,34 +1205,33 @@ class TradingViewEmbed extends React.Component {
     const widgetType = this.props.widgetType;
     const widgetConfig = this.props.widgetConfig;
     const elems = document.getElementsByClassName(widgetType);
-    var widgetCount = elems.length + 1;
-
-    // Configure html
-    var widgetHtml;
-    if (widgetType === "ADVANCED_CHART" || widgetType === "SYMBOL_OVERVIEW") {
-      widgetHtml = WIDGETS_HTML[widgetType](widgetCount, this.props.copyrightLink);
-    } else {
-      widgetHtml = WIDGETS_HTML[widgetType](widgetConfig, this.props.copyrightLink);
-    }
-    this.setState({widgetHtml: widgetHtml});
-
+    const widgetCount = elems.length + 1;
     // Add script
     var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.className = widgetType;
-    script.async = true;
     script.src = WIDGETS_URLS[this.props.widgetType];
-    document.head.appendChild(script);
-    // onload
+    var scriptDiv = document.getElementById(this.state.widget.id);
+    scriptDiv.className = widgetType;
+    scriptDiv.append(script);
+    // Build html
+    var html;
     if (widgetType === "ADVANCED_CHART" || widgetType === "SYMBOL_OVERVIEW") {
+      html = WIDGETS_HTML[widgetType](widgetCount, this.props.copyrightLink);
       ONLOAD[widgetType](script, widgetCount, widgetConfig);
+    } else {
+      html = WIDGETS_HTML[widgetType](widgetConfig, this.props.copyrightLink);
     }
+    // Update states
+    let widget = this.state.widget;
+    widget["id"] = `${widgetType}_${widgetCount}`;
+    widget["html"] = html;
+    this.setState({widget: widget});
   }
 
   render() {
     return (
       <div
-        dangerouslySetInnerHTML={{__html: this.state.widgetHtml}}
+        id={this.state.widget.id}
+        dangerouslySetInnerHTML={{__html: this.state.widget.html}}
         style={{
           width: "100%",
           height: "100%",
