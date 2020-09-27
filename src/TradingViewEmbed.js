@@ -177,13 +177,14 @@ function widgetCompanyProfile(widgetConfig={}, copyrightLink) {
     "symbol": "NASDAQ:GOOG",
     "width": 480,
     "height": 650,
+    "largeChartUrl": "",
     "colorTheme": "light",
     "isTransparent": false,
     "locale": "en",
     "autosize": false
   };
   const config = Object.assign(defaultConfigCompanyProfile, widgetConfig);
-  var {symbol, width, height, colorTheme, isTransparent, locale, autosize} = config;
+  var {symbol, width, height, colorTheme, isTransparent, locale, autosize,largeChartUrl} = config;
   if (autosize) {
     width = "100%";
     height = "100%";
@@ -194,6 +195,7 @@ function widgetCompanyProfile(widgetConfig={}, copyrightLink) {
       "symbol": "${symbol}",
       "width": "${width}",
       "height": "${height}",
+      "largeChartUrl": "${largeChartUrl}",
       "colorTheme": "${colorTheme}",
       "isTransparent": ${isTransparent},
       "locale": "${locale}"
@@ -1111,16 +1113,18 @@ function widgetTickerTape(widgetConfig={}, copyrightLink) {
     ],
     "colorTheme": "light",
     "isTransparent": false,
+    "largeChartUrl": "",
     "displayMode": "adaptive",
     "locale": "en"
   };
   const config = Object.assign(defaultConfigTickerTape, widgetConfig);
-  const {symbols, colorTheme, isTransparent, displayMode, locale} = config;
+  const {symbols, colorTheme, isTransparent, displayMode, locale,largeChartUrl} = config;
   const widgetHtml = buildHtml(
     "TICKER_TAPE",
     `{
       "symbols": ${JSON.stringify(symbols)},
       "colorTheme": "${colorTheme}",
+      "largeChartUrl": "${largeChartUrl}",
       "isTransparent": ${isTransparent},
       "displayMode": "${displayMode}",
       "locale": "${locale}"
