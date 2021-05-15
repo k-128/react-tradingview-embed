@@ -1,6 +1,32 @@
 # React TradingView Embeds
 ---
 - React + TypeScript component for [TradingView Embeds](https://www.tradingview.com/widget/)
+- <https://k-128.github.io/react-tradingview-embed/>
+
+<br />
+
+*Usage*
+- `npm install --save react-tradingview-embed`
+
+```ts
+import { AdvancedChart } from "react-tradingview-embed";
+
+const App = () => <AdvancedChart />;
+```
+
+<br />
+
+*Missing widget props*
+```ts
+import { AdvancedChart } from "react-tradingview-widget";
+
+// If widgets props are missing, use widgetPropsAny
+const App = () => <AdvancedChart widgetPropsAny={{"newProp": true}} />;
+```
+
+<br />
+
+> If redeclared, props set in widgetPropsAny will override those in widgetProps.
 
 <br />
 
@@ -24,28 +50,5 @@
 - [x] [FundamentalData](<https://www.tradingview.com/widget/fundamental-data/>)
 - [x] [CompanyProfile](<https://www.tradingview.com/widget/symbol-profile/>)
 - [x] [Timeline](<https://www.tradingview.com/widget/timeline/>)
-
-<br />
-
-*Usage*
-- `npm install --save react-tradingview-embed`
-
-```ts
-import { AdvancedChart } from "react-tradingview-embed";
-
-const App = () => <AdvancedChart />;
-```
-
-<br />
-
-*Missing widget props*
-```ts
-import { AdvancedChart } from "react-tradingview-widget";
-
-// If widgets props are missing, use widgetPropsAny
-const App = () => <AdvancedChart widgetPropsAny={{"newProp": true}} />;
-```
-
-> If redeclared, props set in widgetPropsAny override those set in widgetProps.
 
 <br />

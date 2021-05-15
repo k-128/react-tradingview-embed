@@ -25,7 +25,8 @@
     "build": "tsc --build \"./tsconfig.json\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
@@ -49,6 +50,7 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "gh-pages": "^3.1.0",
     "storybook-readme": "^5.0.9"
   },
   "types": "./lib/index.d.ts",
