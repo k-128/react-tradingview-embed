@@ -21,7 +21,7 @@
   ],
   "homepage": "https://github.com/k-128/react-tradingview-embed",
   "scripts": {
-    "start": "start-storybook -p 9999 -s public",
+    "start": "start-storybook -p 9999 -s public --no-manager-cache",
     "build": "tsc --build \"./tsconfig.json\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -47,9 +47,11 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-knobs": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "@storybook/theming": "^6.2.9",
     "gh-pages": "^3.1.0",
     "storybook-readme": "^5.0.9"
   },
