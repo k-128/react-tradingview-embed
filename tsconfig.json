@@ -2,12 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["esnext", "dom"],
-    "outDir": "lib",
     "jsx": "react-jsx",
     "module": "esnext",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "strict": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
@@ -22,7 +21,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "outDir": "dist",
+    "paths": {
+      "react-tradingview-embed": ["./dist"],
+    }
   },
   "include": ["src"],
   "exclude": [
