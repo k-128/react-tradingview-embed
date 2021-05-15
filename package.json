@@ -1,38 +1,86 @@
 {
   "name": "react-tradingview-embed",
-  "version": "1.0.2",
-  "description": "React Component for TradingView Embeds",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xnr-k/react-tradingview-embed.git"
-  },
-  "keywords": [
-    "react",
-    "tradingview",
-    "embeds",
-    "widgets"
-  ],
-  "author": "k <xnr.k@protonmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xnr-k/react-tradingview-embed/issues"
-  },
-  "homepage": "https://github.com/xnr-k/react-tradingview-embed#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0"
-  },
-  "peerDependencies": {
-    "react": "^16.10.1"
+  "version": "2.1.1",
+  "description": "React Components for TradingView Embeds",
+  "private": false,
+  "main": "lib/src/index.js",
+  "directories": {
+    "lib": "lib"
   },
   "files": [
-    "dist/*"
-  ]
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k-128/react-tradingview-embed/"
+  },
+  "author": "k",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript",
+    "tradingview"
+  ],
+  "homepage": "https://github.com/k-128/react-tradingview-embed",
+  "scripts": {
+    "start": "start-storybook -p 9999 -s public",
+    "build": "tsc --build \"./tsconfig.json\"",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.13",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.4",
+    "web-vitals": "^1.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "storybook-readme": "^5.0.9"
+  },
+  "types": "./lib/index.d.ts",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
