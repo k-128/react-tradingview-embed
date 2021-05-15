@@ -29,9 +29,9 @@ type SymbolOverviewProps = {
 const SymbolOverview = (props: SymbolOverviewProps) => {
   const { widgetProps, widgetPropsAny } = props;
 
-  let container_id = "symbol-overview-widget-container";
+  let containerId = "symbol-overview-widget-container";
   if (widgetProps?.container_id) {
-    container_id = widgetProps?.container_id;
+    containerId = widgetProps?.container_id;
   }
 
   const ref: {current: HTMLDivElement | null} = React.createRef();
@@ -72,7 +72,7 @@ const SymbolOverview = (props: SymbolOverviewProps) => {
               "underLineColor": "rgba(55, 166, 239, 0.15)",
               "isTransparent": false,
               "autosize": false,
-              "container_id": container_id,
+              "container_id": containerId,
               ...widgetProps,
               ...widgetPropsAny,
             }
@@ -90,9 +90,9 @@ const SymbolOverview = (props: SymbolOverviewProps) => {
         }
       }
     }
-  }, [ref, widgetProps, widgetPropsAny, container_id]);
+  }, [ref, widgetProps, widgetPropsAny, containerId]);
 
-  return <div id={container_id} ref={ref} />;
+  return <div id={containerId} ref={ref} />;
 }
 
 export default SymbolOverview;

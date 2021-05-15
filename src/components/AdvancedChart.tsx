@@ -34,9 +34,9 @@ type AdvancedChartProps = {
 const AdvancedChart = (props: AdvancedChartProps) => {
   const { widgetProps, widgetPropsAny } = props;
 
-  let container_id = "advanced-chart-widget-container";
+  let containerId = "advanced-chart-widget-container";
   if (widgetProps?.container_id) {
-    container_id = widgetProps?.container_id;
+    containerId = widgetProps?.container_id;
   }
 
   const ref: {current: HTMLDivElement | null} = React.createRef();
@@ -67,7 +67,7 @@ const AdvancedChart = (props: AdvancedChartProps) => {
               "withdateranges": true,
               "save_image": true,
               "enable_publishing": false,
-              "container_id": container_id,
+              "container_id": containerId,
               ...widgetProps,
               ...widgetPropsAny,
             }
@@ -85,9 +85,9 @@ const AdvancedChart = (props: AdvancedChartProps) => {
         }
       }
     }
-  }, [ref, widgetProps, widgetPropsAny, container_id]);
+  }, [ref, widgetProps, widgetPropsAny, containerId]);
 
-  return <div id={container_id} ref={ref} />;
+  return <div id={containerId} ref={ref} />;
 }
 
 export default AdvancedChart;

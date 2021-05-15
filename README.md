@@ -1,6 +1,6 @@
 # React TradingView Embeds
 ---
-- React + TypeScript component for [TradingView Embeds](https://www.tradingview.com/widget/)
+- React + TypeScript components for [TradingView Embeds](https://www.tradingview.com/widget/)
 - <https://k-128.github.io/react-tradingview-embed/>
 
 <br />
@@ -11,7 +11,7 @@
 ```ts
 import { AdvancedChart } from "react-tradingview-embed";
 
-const App = () => <AdvancedChart />;
+const App = () => <AdvancedChart widgetProps={{"theme": "dark"}} />;
 ```
 
 <br />
