@@ -28,6 +28,7 @@
       "react-tradingview-embed": ["./dist"],
     }
   },
+  "types": "./dist/index.d.ts",
   "include": ["src"],
   "exclude": [
     "node_modules",
