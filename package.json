@@ -1,6 +1,6 @@
 {
   "name": "react-tradingview-embed",
-  "version": "2.2.0",
+  "version": "2.2.3",
   "description": "React Components for TradingView Embeds",
   "private": false,
   "main": "dist/index.js",
