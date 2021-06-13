@@ -24,8 +24,6 @@ import { AdvancedChart } from "react-tradingview-widget";
 const App = () => <AdvancedChart widgetPropsAny={{"newProp": true}} />;
 ```
 
-<br />
-
 > If redeclared, props set in widgetPropsAny will override those in widgetProps.
 
 <br />
