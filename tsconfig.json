@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["esnext", "dom"],
-    "jsx": "react-jsx",
-    "module": "esnext",
+    "target": "ES6",
+    "lib": ["ES6", "ESNext", "DOM"],
+    "module": "ES6",
+    "jsx": "react",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
