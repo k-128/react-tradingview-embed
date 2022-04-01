@@ -12,16 +12,9 @@
 import { AdvancedChart } from "react-tradingview-embed";
 
 const App = () => <AdvancedChart widgetProps={{"theme": "dark"}} />;
-```
 
-<br />
-
-*Missing widget props*
-```ts
-import { AdvancedChart } from "react-tradingview-widget";
-
-// If widgets props are missing, use widgetPropsAny
-const App = () => <AdvancedChart widgetPropsAny={{"newProp": true}} />;
+// If widgets props are missing, use widgetPropsAny, ex:
+// - <AdvancedChart widgetPropsAny={{"newProp": true}} />
 ```
 
 > If redeclared, props set in widgetPropsAny will override those in widgetProps.

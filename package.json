@@ -1,6 +1,6 @@
 {
   "name": "react-tradingview-embed",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "React components for TradingView Embeds",
   "private": false,
   "main": "dist/index.js",
@@ -21,43 +21,19 @@
   ],
   "homepage": "https://github.com/k-128/react-tradingview-embed",
   "scripts": {
-    "start": "start-storybook -p 9999 -s public --no-manager-cache",
-    "build": "tsc --build \"./tsconfig.json\"",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "build": "tsc --build \"./tsconfig.json\""
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.3",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^14.0.4",
-    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.6.3",
-    "web-vitals": "^2.1.4",
-    "@storybook/addon-actions": "^6.4.20",
-    "@storybook/addon-essentials": "^6.4.20",
-    "@storybook/addon-knobs": "^6.2.9",
-    "@storybook/addon-links": "^6.4.20",
-    "@storybook/addons": "^6.4.20",
-    "@storybook/builder-webpack5": "^6.4.20",
-    "@storybook/manager-webpack5": "^6.4.20",
-    "@storybook/node-logger": "^6.4.20",
-    "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/react": "^6.4.20",
-    "@storybook/theming": "^6.4.20",
-    "browserslist": ">=4.20.2",
-    "gh-pages": "^3.2.3",
-    "glob-parent": ">=6.0.2",
-    "storybook-readme": "^5.0.9"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^4.6.3"
   },
   "resolutions": {
     "webpack": "^5.70.0"
@@ -67,16 +43,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
     ]
   },
   "browserslist": {
