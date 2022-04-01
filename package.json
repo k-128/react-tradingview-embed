@@ -1,6 +1,6 @@
 {
   "name": "react-tradingview-embed",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "React components for TradingView Embeds",
   "private": false,
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^14.0.4",
