@@ -15,9 +15,9 @@ const App = () => <AdvancedChart widgetProps={{"theme": "dark"}} />;
 
 // If widgets props are missing, use widgetPropsAny, ex:
 // - <AdvancedChart widgetPropsAny={{"newProp": true}} />
+//
+// > If redeclarations, widgetPropsAny keys will override widgetProps.
 ```
-
-> If redeclared, props set in widgetPropsAny will override those in widgetProps.
 
 <br />
 
