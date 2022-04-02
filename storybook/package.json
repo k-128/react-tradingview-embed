@@ -1,5 +1,10 @@
 {
   "name": "react-tradingview-embed-storybook",
+  "homepage": "https://github.com/k-128/react-tradingview-embed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k-128/react-tradingview-embed/"
+  },
   "version": "1.0.0",
   "private": "true",
   "devDependencies": {
