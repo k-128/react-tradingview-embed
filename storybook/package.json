@@ -1,42 +1,26 @@
 {
-  "name": "storybook",
+  "name": "react-tradingview-embed-storybook",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
-  "scripts": {
-    "start": "start-storybook -p 9999 -s public --no-manager-cache",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
-  },
+  "private": "true",
   "devDependencies": {
+    "@babel/core": "^7.17.8",
     "@storybook/addon-actions": "^6.4.20",
     "@storybook/addon-essentials": "^6.4.20",
-    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-interactions": "^6.4.20",
     "@storybook/addon-links": "^6.4.20",
-    "@storybook/addons": "^6.4.20",
-    "@storybook/builder-webpack5": "^6.4.20",
-    "@storybook/manager-webpack5": "^6.4.20",
-    "@storybook/node-logger": "^6.4.20",
-    "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.20",
-    "@storybook/theming": "^6.4.20",
-    "browserslist": ">=4.20.2",
-    "gh-pages": "^3.2.3",
-    "glob-parent": ">=6.0.2",
-    "storybook-readme": "^5.0.9"
+    "@storybook/testing-library": "^0.0.9",
+    "babel-loader": "^8.2.4",
+    "gh-pages": "^3.2.3"
   },
-  "overrides": [
-    {
-      "files": [
-        "**/*.stories.*"
-      ],
-      "rules": {
-        "import/no-anonymous-default-export": "off"
-      }
-    }
-  ]
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-tradingview-embed": "^3.0.6"
+  },
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook",
+    "deploy": "gh-pages -d storybook-static"
+  }
 }
