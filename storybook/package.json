@@ -8,15 +8,15 @@
   "version": "1.0.0",
   "private": "true",
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@storybook/addon-actions": "^6.4.20",
-    "@storybook/addon-essentials": "^6.4.20",
-    "@storybook/addon-interactions": "^6.4.20",
-    "@storybook/addon-links": "^6.4.20",
-    "@storybook/react": "^6.4.20",
-    "@storybook/testing-library": "^0.0.9",
-    "babel-loader": "^8.2.4",
-    "gh-pages": "^3.2.3"
+    "@babel/core": "^7.17.10",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.11",
+    "babel-loader": "^8.2.5",
+    "gh-pages": "^4.0.0"
   },
   "dependencies": {
     "react": "^17.0.2",
