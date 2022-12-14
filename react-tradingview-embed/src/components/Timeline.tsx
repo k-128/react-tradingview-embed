@@ -11,6 +11,7 @@ export type TimelineWidgetProps = {
 }
 
 type TimelineProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: TimelineWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -55,7 +56,7 @@ const Timeline = (props: TimelineProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default Timeline;

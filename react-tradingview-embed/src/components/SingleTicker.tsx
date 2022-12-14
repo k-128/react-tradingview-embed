@@ -10,6 +10,7 @@ export type SingleTickerWidgetProps = {
 }
 
 type SingleTickerProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: SingleTickerWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -53,7 +54,7 @@ const SingleTicker = (props: SingleTickerProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default SingleTicker;

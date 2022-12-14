@@ -11,6 +11,7 @@ export type ForexCrossRatesWidgetProps = {
 }
 
 type ForexCrossRatesProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: ForexCrossRatesWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -65,7 +66,7 @@ const ForexCrossRates = (props: ForexCrossRatesProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default ForexCrossRates;

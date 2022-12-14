@@ -11,6 +11,7 @@ export type ForexHeatMapWidgetProps = {
 }
 
 type ForexHeatMapProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: ForexHeatMapWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -65,7 +66,7 @@ const ForexHeatMap = (props: ForexHeatMapProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default ForexHeatMap;

@@ -13,6 +13,7 @@ export type TechnicalAnalysisWidgetProps = {
 }
 
 type TechnicalAnalysisProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: TechnicalAnalysisWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -59,7 +60,7 @@ const TechnicalAnalysis = (props: TechnicalAnalysisProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default TechnicalAnalysis;

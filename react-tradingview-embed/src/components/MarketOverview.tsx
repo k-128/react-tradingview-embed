@@ -22,6 +22,7 @@ export type MarketOverviewWidgetProps = {
 }
 
 type MarketOverviewProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: MarketOverviewWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -76,7 +77,7 @@ const MarketOverview = (props: MarketOverviewProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default MarketOverview;

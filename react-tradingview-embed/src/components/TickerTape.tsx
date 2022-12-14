@@ -11,6 +11,7 @@ export type TickerTapeWidgetProps = {
 }
 
 type TickerTapeProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: TickerTapeWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -76,7 +77,7 @@ const TickerTape = (props: TickerTapeProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default TickerTape;
