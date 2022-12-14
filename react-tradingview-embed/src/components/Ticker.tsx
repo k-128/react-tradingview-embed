@@ -10,6 +10,7 @@ export type TickerWidgetProps = {
 }
 
 type TickerProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: TickerWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -74,7 +75,7 @@ const Ticker = (props: TickerProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default Ticker;

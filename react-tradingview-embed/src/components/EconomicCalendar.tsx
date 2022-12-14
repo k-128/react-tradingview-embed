@@ -11,6 +11,7 @@ export type EconomicCalendarWidgetProps = {
 }
 
 type EconomicCalendarProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: EconomicCalendarWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -55,7 +56,7 @@ const EconomicCalendar = (props: EconomicCalendarProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default EconomicCalendar;

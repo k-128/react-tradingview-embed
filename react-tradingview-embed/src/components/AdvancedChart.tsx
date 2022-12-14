@@ -26,6 +26,7 @@ export type AdvancedChartWidgetProps = {
 }
 
 type AdvancedChartProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: AdvancedChartWidgetProps;
   widgetPropsAny?: any;
   children?: never;

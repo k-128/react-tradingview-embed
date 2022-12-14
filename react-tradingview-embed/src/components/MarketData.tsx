@@ -12,6 +12,7 @@ export type MarketDataWidgetProps = {
 }
 
 type MarketDataProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: MarketDataWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -172,7 +173,7 @@ const MarketData = (props: MarketDataProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default MarketData;

@@ -16,6 +16,7 @@ export type MiniChartWidgetProps = {
 }
 
 type MiniChartProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: MiniChartWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -65,7 +66,7 @@ const MiniChart = (props: MiniChartProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default MiniChart;

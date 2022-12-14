@@ -22,6 +22,7 @@ export type StockMarketWidgetProps = {
 }
 
 type StockMarketProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: StockMarketWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -77,7 +78,7 @@ const StockMarket = (props: StockMarketProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default StockMarket;

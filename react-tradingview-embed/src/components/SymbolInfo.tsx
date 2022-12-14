@@ -10,6 +10,7 @@ export type SymbolInfoWidgetProps = {
 }
 
 type SymbolInfoProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: SymbolInfoWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -53,7 +54,7 @@ const SymbolInfo = (props: SymbolInfoProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default SymbolInfo;

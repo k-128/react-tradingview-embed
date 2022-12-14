@@ -13,6 +13,7 @@ export type ScreenerWidgetProps = {
 }
 
 type ScreenerProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: ScreenerWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -59,7 +60,7 @@ const Screener = (props: ScreenerProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default Screener;

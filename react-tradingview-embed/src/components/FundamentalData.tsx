@@ -13,6 +13,7 @@ export type FundamentalDataWidgetProps = {
 }
 
 type FundamentalDataProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: FundamentalDataWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -59,7 +60,7 @@ const FundamentalData = (props: FundamentalDataProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default FundamentalData;

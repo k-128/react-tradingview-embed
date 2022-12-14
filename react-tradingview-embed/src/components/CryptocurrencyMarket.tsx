@@ -12,6 +12,7 @@ export type CryptocurrencyMarketWidgetProps = {
 }
 
 type CryptocurrencyMarketProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: CryptocurrencyMarketWidgetProps;
   widgetPropsAny?: any;
   children?: never;
@@ -57,7 +58,7 @@ const CryptocurrencyMarket = (props: CryptocurrencyMarketProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} />;
+  return <div style={props.parentStyle} ref={ref} />;
 }
 
 export default CryptocurrencyMarket;

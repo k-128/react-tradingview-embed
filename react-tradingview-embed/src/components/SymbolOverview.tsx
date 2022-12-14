@@ -21,6 +21,7 @@ export type SymbolOverviewWidgetProps = {
 }
 
 type SymbolOverviewProps = {
+  parentStyle?: React.CSSProperties;
   widgetProps?: SymbolOverviewWidgetProps;
   widgetPropsAny?: any;
   children?: never;
